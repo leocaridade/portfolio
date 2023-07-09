@@ -1,5 +1,6 @@
 import { Disclosure } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon, XMarkIcon, SunIcon } from '@heroicons/react/24/outline'
+import { HiBars3, HiXMark, HiOutlineSun } from 'react-icons/hi2'
 
 const navigation = [
   { name: 'Home', href: '#', current: true },
@@ -27,9 +28,9 @@ export default function Header() {
                 <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
-                    <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
+                    <HiXMark className="block h-6 w-6" aria-hidden="true" />
                   ) : (
-                    <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+                    <HiBars3 className="block h-6 w-6" aria-hidden="true" />
                   )}
                 </Disclosure.Button>
               </div>
@@ -50,6 +51,7 @@ export default function Header() {
                         {item.name}
                       </a>
                     ))}
+                    <HiOutlineSun className="block h-10 w-6 text-white cursor-pointer" aria-hidden="true" />
                   </div>
                 </div>
               </div>
